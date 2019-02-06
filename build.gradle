@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'rattrapage.kotlin.anatole.allain'
-version '1.0-SNAPSHOT'
+version '1.0-SNAPSHOTgit'
 
 repositories {
     mavenCentral()
