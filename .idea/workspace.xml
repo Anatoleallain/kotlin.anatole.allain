@@ -21,6 +21,7 @@
     </projectState>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="-627648115">
       <usages-collector id="statistics.lifecycle.project">
@@ -57,6 +58,8 @@
   <component name="FavoritesManager">
     <favorites_list name="kotlin.anatole.allain" />
   </component>
+=======
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
 =======
 >>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
   <component name="FileEditorManager">
@@ -123,6 +126,7 @@
     </option>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -134,10 +138,15 @@
     <option name="width" value="1280" />
     <option name="height" value="739" />
 =======
+=======
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="352" />
     <option name="width" value="1118" />
     <option name="height" value="982" />
+<<<<<<< HEAD
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
+=======
 >>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -179,13 +188,23 @@
             <path>
               <item name="rattrapage.kotlin.anatole.allain" type="b2602c69:ProjectViewProjectNode" />
               <item name="rattrapage.kotlin.anatole.allain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+<<<<<<< HEAD
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rattrapage.kotlin.anatole.allain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rattrapage.kotlin.anatole.allain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+=======
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="rattrapage.kotlin.anatole.allain" type="b2602c69:ProjectViewProjectNode" />
               <item name="rattrapage.kotlin.anatole.allain" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rattrapage.kotlin.anatole.allain" type="b2602c69:ProjectViewProjectNode" />
@@ -253,8 +272,12 @@
       <option name="presentableId" value="Default" />
       <updated>1549132867746</updated>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1549132878493" duration="1588000" />
       <workItem from="1549403801948" duration="1631000" />
+=======
+      <workItem from="1549132878493" duration="24775000" />
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
 =======
       <workItem from="1549132878493" duration="24775000" />
 >>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
@@ -262,6 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="3219000" />
   </component>
@@ -290,6 +314,21 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22483222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+=======
+    <option name="totallyTimeSpent" value="24775000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22483222" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
       <window_info anchor="bottom" id="Build" weight="0.3045326" />
       <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -297,6 +336,9 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
+<<<<<<< HEAD
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
+=======
 >>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -306,6 +348,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Build" order="7" weight="0.3045326" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32766616" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
@@ -314,6 +357,8 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Maven Projects" />
 =======
+=======
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
       <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Capture Analysis" />
@@ -321,6 +366,9 @@
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
+<<<<<<< HEAD
+>>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
+=======
 >>>>>>> 40d3ff11c324f5819173da43ac19729388b77f53
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
