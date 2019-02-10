@@ -2,7 +2,7 @@ package kpi
 
 import Device
 
-class PanierMoyen : KPICalcul.KPIWork{
+class PanierMoyen : KPIWork{
     override fun work(devices: List<Device>) {
         val headers = arrayOf("Panier Moyen", "Nombre de commandes")
         val count = devices.filter { it.commande > 0 }.count()

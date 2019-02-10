@@ -2,7 +2,7 @@ package kpi
 
 import Device
 
-class CoutparClic : KPICalcul.KPIWork{
+class CoutparClic : KPIWork{
     override fun work(devices: List<Device>) {
         val headers = arrayOf("Coût par clic", "Nombre de clics")
         val count = devices.filter { it.clics > 0 }.count()

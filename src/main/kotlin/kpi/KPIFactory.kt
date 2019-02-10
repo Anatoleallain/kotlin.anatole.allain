@@ -1,7 +1,7 @@
 package kpi
 
 object KPIFactory {
-    fun getKpi(kpiMenu: KPIMenu): KPICalcul.KPIWork = when(kpiMenu) {
+    fun getKpi(kpiMenu: KPIMenu): KPIWork = when(kpiMenu) {
         KPIMenu.CA_PAR_MOIS_PAR_ANNEE -> CAparMoisparAnnee()
         KPIMenu.CA_PAR_APPAREIL -> CAparAppareil()
         KPIMenu.PANIER_MOYEN -> PanierMoyen()

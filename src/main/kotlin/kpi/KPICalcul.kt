@@ -2,9 +2,9 @@ package kpi
 
 import Device
 
-class KPICalcul {
+class KPICalcul(private val barocwork: KPIWork, private val devices: List<Device>) {
 
-    interface KPIWork {
-        fun work(devices: List<Device>)
+    fun work() {
+        barocwork.work(devices)
     }
 }

@@ -2,7 +2,7 @@ package kpi
 
 import Device
 
-class CAparAppareil : KPICalcul.KPIWork{
+class CAparAppareil : KPIWork{
     override fun work(devices: List<Device>) {
         val headers = arrayOf("Appareil", "CA")
         val count = devices.groupBy { it.device }.count()

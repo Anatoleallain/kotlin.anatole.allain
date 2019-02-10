@@ -1,66 +1,62 @@
 import java.io.BufferedReader
+import java.io.File
 import java.io.FileReader
 import java.io.IOException
 import java.util.*
+import trie.Categories
 
-val APPAREIL_ANNEE_IDX = 0
-val APPAREIL_DEVICE_IDX = 1
-val APPAREIL_COMMANDE_IDX = 2
-val APPAREIL_IMPRESSION_IDX = 3
-val APPAREIL_CLICS_IDX = 4
-val APPAREIL_COUT_IDX = 5
-val APPAREIL_PM_IDX = 6
-val APPAREIL_CA_IDX = 7
-val APPAREIL_MOIS_IDX = 9
+class Reader {
+    fun readFile(filename: String = "data_csv.csv"): List<Device> {
+        var fileReader: BufferedReader? = null
+
+        try {
+            val devices = ArrayList<Device>()
+            var line: String?
 
 
-fun readFile(args: Array<String>?) {
-    var fileReader: BufferedReader? = null
+            val classLoader = javaClass.classLoader
+            val file = File(classLoader.getResource(filename)!!.file)
 
-    try {
-        val devices = ArrayList<Device>()
-        var line: String?
+            fileReader = BufferedReader(FileReader(file))
 
-        fileReader = BufferedReader(FileReader("data_csv.csv"))
+            // Read CSV header
+            fileReader.readLine()
 
-        // Read CSV header
-        fileReader.readLine()
+            // Read the file line by line starting from the second line
+            line = fileReader.readLine()
+            while (line != null) {
+                val tokens = line.split(";")
+                if (tokens.size > 0) {
+                    val device = Device(
+                        Integer.parseInt(tokens[Categories.APPAREIL_ANNEE_IDX]),
+                        tokens[Categories.APPAREIL_DEVICE_IDX],
+                        Integer.parseInt(tokens[Categories.APPAREIL_COMMANDE_IDX]),
+                        Integer.parseInt(tokens[Categories.APPAREIL_IMPRESSION_IDX]),
+                        Integer.parseInt(tokens[Categories.APPAREIL_CLICS_IDX]),
+                        Integer.parseInt(tokens[Categories.APPAREIL_COUT_IDX]),
+                        Integer.parseInt(tokens[Categories.APPAREIL_PM_IDX]),
+                        Integer.parseInt(tokens[Categories.APPAREIL_CA_IDX]),
+                        tokens[Categories.APPAREIL_MOIS_IDX]
+                    )
+                    devices.add(device)
+                }
 
-        // Read the file line by line starting from the second line
-        line = fileReader.readLine()
-        while (line != null) {
-            val tokens = line.split(";")
-            if (tokens.size > 0) {
-                val device = Device(
-                    Integer.parseInt(tokens[APPAREIL_ANNEE_IDX]),
-                    tokens[APPAREIL_DEVICE_IDX],
-                    Integer.parseInt(tokens[APPAREIL_COMMANDE_IDX]),
-                    Integer.parseInt(tokens[APPAREIL_IMPRESSION_IDX]),
-                    Integer.parseInt(tokens[APPAREIL_CLICS_IDX]),
-                    Integer.parseInt(tokens[APPAREIL_COUT_IDX]),
-                    Integer.parseInt(tokens[APPAREIL_PM_IDX]),
-                    Integer.parseInt(tokens[APPAREIL_CA_IDX]),
-                    tokens[APPAREIL_MOIS_IDX]
-                )
-                devices.add(device)
+                line = fileReader.readLine()
             }
 
-            line = fileReader.readLine()
-        }
-
-        // Print the new customer list
-        for (device in devices) {
-            println(device)
-        }
-    } catch (e: Exception) {
-        println("Reading CSV Error!")
-        e.printStackTrace()
-    } finally {
-        try {
-            fileReader!!.close()
-        } catch (e: IOException) {
-            println("Closing fileReader Error!")
+            return devices
+        }catch (e: Exception) {
+            println("Reading CSV Error!")
             e.printStackTrace()
+        } finally {
+            try {
+                fileReader!!.close()
+            } catch (e: IOException) {
+                println("Closing fileReader Error!")
+                e.printStackTrace()
+            }
         }
+        return emptyList()
     }
+
 }

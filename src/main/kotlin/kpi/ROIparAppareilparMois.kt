@@ -2,7 +2,7 @@ package kpi
 
 import Device
 
-class ROIparAppareilparMois : KPICalcul.KPIWork{
+class ROIparAppareilparMois : KPIWork{
     override fun work(devices: List<Device>) {
         val headers = arrayOf("Appareil", "ROI")
         val count = devices.groupBy { it.device }.filterValues { it.sumBy { it.cout } > 0 }.count()

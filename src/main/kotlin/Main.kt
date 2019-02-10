@@ -1,16 +1,15 @@
 import kpi.KPICalcul
 import kpi.KPIFactory
 import kpi.KPIMenu
-import java.io.Reader
 import java.util.*
 
 fun main() {
-    val Reader = Reader()
+    val reader = Reader()
 
-    val devices = readFile(Reader)
+    val devices = reader.readFile()
         .filter { it.commande + it.impressions + it.clics + it.cout + it.pm + it.ca > 0 } // Supprime les lignes vides (cad les lignes avec que des 0)
 
-    val kpiToCalculators = mapOf(
+    val kpilink = mapOf(
         KPIMenu.CA_PAR_MOIS_PAR_ANNEE to KPICalcul(KPIFactory.getKpi(KPIMenu.CA_PAR_MOIS_PAR_ANNEE), devices),
         KPIMenu.CA_PAR_APPAREIL to KPICalcul(KPIFactory.getKpi(KPIMenu.CA_PAR_APPAREIL), devices),
         KPIMenu.PANIER_MOYEN to KPICalcul(KPIFactory.getKpi(KPIMenu.PANIER_MOYEN), devices),
@@ -21,7 +20,7 @@ fun main() {
     )
 
     displayMenu()
-    readInput(kpiToCalculators)
+    readInput(kpilink)
 }
 
 fun displayMenu() { // Affichage du Menu du terminal de commande
@@ -37,7 +36,7 @@ fun displayMenu() { // Affichage du Menu du terminal de commande
     println()
 }
 
-fun readInput(KPIlink: Map<KPIMenu, KPICalcul>) {
+fun readInput(kpilink: Map<KPIMenu, KPICalcul>) {
     val scanner = Scanner(System.`in`)
 
     try {
@@ -46,7 +45,7 @@ fun readInput(KPIlink: Map<KPIMenu, KPICalcul>) {
 
             if (number != 8) {
                 val type = KPIMenu.values()[number - 1]
-                KPIlink[type]?.work()
+                kpilink[type]?.work()
 
                 clearScreen()
                 displayMenu()
@@ -56,7 +55,7 @@ fun readInput(KPIlink: Map<KPIMenu, KPICalcul>) {
         clearScreen()
         println("Bye!")
     } catch (e: Exception) {
-        readInput(KPIlink)
+        readInput(kpilink)
     }
 }
 

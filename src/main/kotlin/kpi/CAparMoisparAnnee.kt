@@ -2,20 +2,20 @@ package kpi
 
 import Device
 
-class CAparMoisparAnnee : KPICalcul.KPIWork{
+class CAparMoisparAnnee : KPIWork{
     override fun work(devices: List<Device>) {
 
-        val CAparannee = devices.groupBy { it.annee }
-        CAparannee.forEach { annee, devices ->
+        val caparannee = devices.groupBy { it.annee }
+        caparannee.forEach { annee, devices ->
 
-            val CAparmois = devices.groupBy { it.mois }
+            val caparmois = devices.groupBy { it.mois }
 
             val headers = arrayOf("Mois", "CA")
-            val count = CAparmois.size
+            val count = caparmois.size
             val data = Array(size = count) { Array(size = 2) { "" } } // String[count][2]
 
             var index = 0
-            CAparmois.forEach { mois, devicesMois ->
+            caparmois.forEach { mois, devicesMois ->
                 val row = data[index]
                 row[0] = "$mois"
                 row[1] = "${devicesMois.sumBy { it.ca }}"
@@ -28,7 +28,7 @@ class CAparMoisparAnnee : KPICalcul.KPIWork{
 
             val row = outerData[0]
             row[0] = "$annee"
-            row[1] = headers, data
+            row[1] = "$headers $data"
 
             println(arrayOf(outerHeaders, outerData))
         }
