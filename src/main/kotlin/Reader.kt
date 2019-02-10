@@ -5,7 +5,7 @@ import java.io.IOException
 import java.util.*
 import trie.Categories
 
-class Reader {
+class Reader{
 
     fun readFile(filename: String = "data_csv.csv"): List<Device> {
         var fileReader: BufferedReader? = null
