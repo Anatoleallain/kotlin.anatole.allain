@@ -17,6 +17,5 @@ class CAparAppareil : KPIWork{
             index++
         }
         println(arrayOf(headers, data))
-        println()
     }
 }
