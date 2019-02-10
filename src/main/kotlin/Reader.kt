@@ -6,13 +6,13 @@ import java.util.*
 import trie.Categories
 
 class Reader {
+
     fun readFile(filename: String = "data_csv.csv"): List<Device> {
         var fileReader: BufferedReader? = null
 
         try {
             val devices = ArrayList<Device>()
             var line: String?
-
 
             val classLoader = javaClass.classLoader
             val file = File(classLoader.getResource(filename)!!.file)
@@ -26,7 +26,7 @@ class Reader {
             line = fileReader.readLine()
             while (line != null) {
                 val tokens = line.split(";")
-                if (tokens.size > 0) {
+                if (tokens.isNotEmpty()) {
                     val device = Device(
                         Integer.parseInt(tokens[Categories.APPAREIL_ANNEE_IDX]),
                         tokens[Categories.APPAREIL_DEVICE_IDX],
@@ -45,7 +45,7 @@ class Reader {
             }
 
             return devices
-        }catch (e: Exception) {
+        } catch (e: Exception) {
             println("Reading CSV Error!")
             e.printStackTrace()
         } finally {
@@ -56,7 +56,7 @@ class Reader {
                 e.printStackTrace()
             }
         }
+
         return emptyList()
     }
-
 }
