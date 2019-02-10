@@ -3,18 +3,18 @@ import java.io.FileReader
 import java.io.IOException
 import java.util.*
 
-val APPAREIL_YEAR_IDX = 0
+val APPAREIL_ANNEE_IDX = 0
 val APPAREIL_DEVICE_IDX = 1
 val APPAREIL_COMMANDE_IDX = 2
 val APPAREIL_IMPRESSION_IDX = 3
 val APPAREIL_CLICS_IDX = 4
-val APPAREIL_COST_IDX = 5
+val APPAREIL_COUT_IDX = 5
 val APPAREIL_PM_IDX = 6
 val APPAREIL_CA_IDX = 7
-val APPAREIL_MONTH_IDX = 9
+val APPAREIL_MOIS_IDX = 9
 
 
-fun main(args: Array<String>?) {
+fun readFile(args: Array<String>?) {
     var fileReader: BufferedReader? = null
 
     try {
@@ -32,15 +32,15 @@ fun main(args: Array<String>?) {
             val tokens = line.split(";")
             if (tokens.size > 0) {
                 val device = Device(
-                    Integer.parseInt(tokens[APPAREIL_YEAR_IDX]),
+                    Integer.parseInt(tokens[APPAREIL_ANNEE_IDX]),
                     tokens[APPAREIL_DEVICE_IDX],
                     Integer.parseInt(tokens[APPAREIL_COMMANDE_IDX]),
                     Integer.parseInt(tokens[APPAREIL_IMPRESSION_IDX]),
                     Integer.parseInt(tokens[APPAREIL_CLICS_IDX]),
-                    Integer.parseInt(tokens[APPAREIL_COST_IDX]),
+                    Integer.parseInt(tokens[APPAREIL_COUT_IDX]),
                     Integer.parseInt(tokens[APPAREIL_PM_IDX]),
                     Integer.parseInt(tokens[APPAREIL_CA_IDX]),
-                    tokens[APPAREIL_MONTH_IDX]
+                    tokens[APPAREIL_MOIS_IDX]
                 )
                 devices.add(device)
             }
