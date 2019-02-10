@@ -16,6 +16,6 @@ class CAparAppareil : KPIWork{
             row[1] = "${items.sumBy { it.ca }}"
             index++
         }
-        println("CA/Appareil=${}")
+        println(arrayOf(headers, data))
     }
 }
